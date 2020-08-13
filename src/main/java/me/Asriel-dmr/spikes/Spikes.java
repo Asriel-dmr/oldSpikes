@@ -1,4 +1,4 @@
-package me.CHANGEME.slimefunaddon;
+package me.Asriel-dmr.spikes;
 
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;

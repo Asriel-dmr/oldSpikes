@@ -45,7 +45,7 @@ public class Spikes extends JavaPlugin implements SlimefunAddon {
  
  
          // wooden spike recipe
-        SlimefunItemStack woodenSpike = new SlimefunItemStack("WOODEN_SPIKE", Material.OAK_PRESSURE_PLATE, "&Wooden Spike", "&aThe Basic Spike - almost kill everyone who steps on it (half a heart left)");
+        SlimefunItemStack woodenSpike = new SlimefunItemStack("WOODEN_SPIKE", Material.OAK_PRESSURE_PLATE, "&eWooden Spike", "&aThe Basic Spike - almost kill everyone who steps on it (half a heart left)");
  
  
         ItemStack[] recipewoodenspike = { null , null, null , null, new ItemStack(Material.WOODEN_SWORD), null, new ItemStack(Material.WOODEN_SWORD), new ItemStack(Material.OAK_LOG), new ItemStack(Material.WOODEN_SWORD) };

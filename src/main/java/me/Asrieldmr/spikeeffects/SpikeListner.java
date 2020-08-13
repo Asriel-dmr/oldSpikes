@@ -6,11 +6,8 @@ import org.bukkit.event.entity.EntityInteractEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-
 import static org.bukkit.event.EventPriority.LOW;
-
 import org.bukkit.entity.LivingEntity;
-
 public class SpikeListner implements Listener {
 
 	public SpikeListner(JavaPlugin plugin) { plugin.getServer().getPluginManager().registerEvents(this, plugin);}
@@ -32,7 +29,11 @@ public class SpikeListner implements Listener {
         }else if (e.getBlock() instanceof GoldSpike) {
             livEnt.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 1, 1));
         }else if (e.getBlock() instanceof DiamondSpike) {
-            livEnt.addPotionEffect(new PotionEffect(PotionEffectType.POISON, 1, 1));
-        	}
-	}
+            livEnt.addPotionEffect(new PotionEffect(PotionEffectType.HARM, 1, 1));
+        }
+	 }
+}
+
+
+	
     

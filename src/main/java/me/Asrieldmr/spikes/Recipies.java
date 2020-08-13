@@ -12,7 +12,12 @@ import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import me.mrCookieSlime.Slimefun.bstats.bukkit.Metrics;
 import me.mrCookieSlime.Slimefun.cscorelib2.config.Config;
 import me.mrCookieSlime.Slimefun.cscorelib2.item.CustomItem;
+import me.Asrieldmr.spikeeffects.DiamondSpike;
+import me.Asrieldmr.spikeeffects.GoldSpike;
+import me.Asrieldmr.spikeeffects.IronSpike;
 import me.Asrieldmr.spikeeffects.SpikeListner;
+import me.Asrieldmr.spikeeffects.StoneSpike;
+import me.Asrieldmr.spikeeffects.WoodenSpike;
 public class Recipies extends JavaPlugin implements SlimefunAddon {
 
     @Override
@@ -28,7 +33,7 @@ public class Recipies extends JavaPlugin implements SlimefunAddon {
         int bStatsId = -1;
         new Metrics(this, bStatsId);
 
-      
+      // category 
         ItemStack categoryItem = new CustomItem(Material.HEAVY_WEIGHTED_PRESSURE_PLATE, "&eSpikes", "", "&a> Click to open");
 
        
@@ -38,29 +43,29 @@ public class Recipies extends JavaPlugin implements SlimefunAddon {
         
        
       
-                
+         // wooden spike recipe
         SlimefunItemStack woodenSpike = new SlimefunItemStack("WOODEN_SPIKE", Material.OAK_PRESSURE_PLATE, "&Wooden Spike", "&aThe Basic Spike - almost kill everyone who steps on it (half a heart left)");
 
         
         ItemStack[] recipewoodenspike = { null , null, null , null, new ItemStack(Material.WOODEN_SWORD), null, new ItemStack(Material.WOODEN_SWORD), new ItemStack(Material.OAK_LOG), new ItemStack(Material.WOODEN_SWORD) };
-        
+        // stone spike recipe
         SlimefunItemStack stoneSpike = new SlimefunItemStack("STONE_SPIKE", Material.STONE_PRESSURE_PLATE, "&eStone Spike", "&alike the wooden spike , but it can kill");
 
-        
+       
         ItemStack[] recipestonespike = { null , null, null , null, new ItemStack(Material.STONE_SWORD), null, new ItemStack(Material.STONE_SWORD), new ItemStack(Material.STONE), new ItemStack(Material.STONE_SWORD) };
 
-        
+        // iron spike recipe
         SlimefunItemStack ironSpike = new SlimefunItemStack("IRON_SPIKE", Material.HEAVY_WEIGHTED_PRESSURE_PLATE, "&eIron Spike", "&aSecond best spike - the complete balance between price and damage");
         
         ItemStack[] recipeironspike = { null , null, null , null, new ItemStack(Material.IRON_SWORD), null, new ItemStack(Material.IRON_SWORD), new ItemStack(Material.IRON_BLOCK), new ItemStack(Material.IRON_SWORD) };
 
-        
+        // gold spike recipe
         SlimefunItemStack goldenSpike = new SlimefunItemStack("GOLDEN_SPIKE", Material.LIGHT_WEIGHTED_PRESSURE_PLATE, "&eGolden Spike", "&aFancier Stone Spikes");
 
         
         ItemStack[] recipegoldspike = { null , null, null , null, new ItemStack(Material.GOLDEN_SWORD), null, new ItemStack(Material.GOLDEN_SWORD), new ItemStack(Material.GOLD_BLOCK), new ItemStack(Material.GOLDEN_SWORD) };
 
-        
+        // diamond spike recipe
         SlimefunItemStack diamondSpike = new SlimefunItemStack("DIAMOND_SPIKE", Material.WARPED_PRESSURE_PLATE, "&eDiamond Spike", "&aExpnsive but destructive.");
 
         
@@ -69,29 +74,29 @@ public class Recipies extends JavaPlugin implements SlimefunAddon {
 
         
         // wooden spike
-        SlimefunItem Woodenspike = new SlimefunItem(category, woodenSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipewoodenspike);
+        SlimefunItem Woodenspike = new WoodenSpike(category, woodenSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipewoodenspike);
         Woodenspike.register(this);
         
         
         // stone spike
-        SlimefunItem StoneSpike = new SlimefunItem(category, stoneSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipestonespike);
+        SlimefunItem StoneSpike = new StoneSpike(category, stoneSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipestonespike);
         StoneSpike.register(this);
         
       //iron spike
-        SlimefunItem IronSpike = new SlimefunItem(category, ironSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipeironspike);
+        SlimefunItem IronSpike = new IronSpike(category, ironSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipeironspike);
         IronSpike.register(this);
         
         
         // golden spike
-        SlimefunItem GoldenSpike = new SlimefunItem(category, goldenSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipegoldspike);
+        SlimefunItem GoldenSpike = new GoldSpike(category, goldenSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipegoldspike);
         GoldenSpike.register(this);
         
         
         // diamond spike
-        SlimefunItem DiamondSpike = new SlimefunItem(category, diamondSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipediamondspike);
+        SlimefunItem DiamondSpike = new DiamondSpike(category, diamondSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipediamondspike);
         DiamondSpike.register(this);
 
-        new SpikeListner (this);
+        new SpikeListner(this);
 
     }
     

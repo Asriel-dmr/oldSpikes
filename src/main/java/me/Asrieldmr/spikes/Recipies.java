@@ -4,7 +4,6 @@ import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
-
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.Category;
@@ -13,8 +12,8 @@ import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import me.mrCookieSlime.Slimefun.bstats.bukkit.Metrics;
 import me.mrCookieSlime.Slimefun.cscorelib2.config.Config;
 import me.mrCookieSlime.Slimefun.cscorelib2.item.CustomItem;
-
-public class Spikes extends JavaPlugin implements SlimefunAddon {
+import me.Asrieldmr.spikeeffects.SpikeListner;
+public class Recipies extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {
@@ -70,33 +69,37 @@ public class Spikes extends JavaPlugin implements SlimefunAddon {
 
         
         // wooden spike
-        SlimefunItem item1 = new SlimefunItem(category, woodenSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipewoodenspike);
-        item1.register(this);
+        SlimefunItem Woodenspike = new SlimefunItem(category, woodenSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipewoodenspike);
+        Woodenspike.register(this);
         
         
         // stone spike
-        SlimefunItem item2 = new SlimefunItem(category, stoneSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipestonespike);
-        item2.register(this);
+        SlimefunItem StoneSpike = new SlimefunItem(category, stoneSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipestonespike);
+        StoneSpike.register(this);
         
       //iron spike
-        SlimefunItem item = new SlimefunItem(category, ironSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipeironspike);
-        item.register(this);
+        SlimefunItem IronSpike = new SlimefunItem(category, ironSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipeironspike);
+        IronSpike.register(this);
         
         
         // golden spike
-        SlimefunItem item3 = new SlimefunItem(category, goldenSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipegoldspike);
-        item3.register(this);
+        SlimefunItem GoldenSpike = new SlimefunItem(category, goldenSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipegoldspike);
+        GoldenSpike.register(this);
         
         
         // diamond spike
-        SlimefunItem item4 = new SlimefunItem(category, diamondSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipediamondspike);
-        item4.register(this);
+        SlimefunItem DiamondSpike = new SlimefunItem(category, diamondSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipediamondspike);
+        DiamondSpike.register(this);
 
-
+        new SpikeListner (this);
 
     }
+    
+   
+		
+    
 
-    @Override
+	@Override
     public void onDisable() {
       
     }

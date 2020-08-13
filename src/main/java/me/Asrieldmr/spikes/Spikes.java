@@ -37,24 +37,63 @@ public class Spikes extends JavaPlugin implements SlimefunAddon {
         Category category = new Category(categoryId, categoryItem);
 
         
-        SlimefunItemStack slimefunItem = new SlimefunItemStack("Iron_Spike", Material.HEAVY_WEIGHTED_PRESSURE_PLATE, "&eIron Spike", "&aSecond best spike - the complete balance between price and damage");
-
        
-        ItemStack[] recipe = { null , null, null , null, new ItemStack(Material.IRON_SWORD), null, new ItemStack(Material.IRON_SWORD), new ItemStack(Material.IRON_BLOCK), new ItemStack(Material.IRON_SWORD) };
-
       
-        SlimefunItem item = new SlimefunItem(category, slimefunItem, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
-        item.register(this);
-        
-        SlimefunItemStack slimefunItem1 = new SlimefunItemStack("Wooden_Spike", Material.OAK_PRESSURE_PLATE, "&Wooden Spike", "&aThe Basic Spike - almost kill everyone who steps on it (half a heart left)");
+                
+        SlimefunItemStack woodenSpike = new SlimefunItemStack("WOODEN_SPIKE", Material.OAK_PRESSURE_PLATE, "&Wooden Spike", "&aThe Basic Spike - almost kill everyone who steps on it (half a heart left)");
 
         
-        ItemStack[] recipe1 = { null , null, null , null, new ItemStack(Material.WOODEN_SWORD), null, new ItemStack(Material.WOODEN_SWORD), new ItemStack(Material.OAK_LOG), new ItemStack(Material.WOODEN_SWORD) };
+        ItemStack[] recipewoodenspike = { null , null, null , null, new ItemStack(Material.WOODEN_SWORD), null, new ItemStack(Material.WOODEN_SWORD), new ItemStack(Material.OAK_LOG), new ItemStack(Material.WOODEN_SWORD) };
+        
+        SlimefunItemStack stoneSpike = new SlimefunItemStack("STONE_SPIKE", Material.STONE_PRESSURE_PLATE, "&eStone Spike", "&alike the wooden spike , but it can kill");
 
-      
-        SlimefunItem item1 = new SlimefunItem(category, slimefunItem1, RecipeType.ENHANCED_CRAFTING_TABLE, recipe1);
+        
+        ItemStack[] recipestonespike = { null , null, null , null, new ItemStack(Material.STONE_SWORD), null, new ItemStack(Material.STONE_SWORD), new ItemStack(Material.STONE), new ItemStack(Material.STONE_SWORD) };
+
+        
+        SlimefunItemStack ironSpike = new SlimefunItemStack("IRON_SPIKE", Material.HEAVY_WEIGHTED_PRESSURE_PLATE, "&eIron Spike", "&aSecond best spike - the complete balance between price and damage");
+        
+        ItemStack[] recipeironspike = { null , null, null , null, new ItemStack(Material.IRON_SWORD), null, new ItemStack(Material.IRON_SWORD), new ItemStack(Material.IRON_BLOCK), new ItemStack(Material.IRON_SWORD) };
+
+        
+        SlimefunItemStack goldenSpike = new SlimefunItemStack("GOLDEN_SPIKE", Material.LIGHT_WEIGHTED_PRESSURE_PLATE, "&eGolden Spike", "&aFancier Stone Spikes");
+
+        
+        ItemStack[] recipegoldspike = { null , null, null , null, new ItemStack(Material.GOLDEN_SWORD), null, new ItemStack(Material.GOLDEN_SWORD), new ItemStack(Material.GOLD_BLOCK), new ItemStack(Material.GOLDEN_SWORD) };
+
+        
+        SlimefunItemStack diamondSpike = new SlimefunItemStack("DIAMOND_SPIKE", Material.WARPED_PRESSURE_PLATE, "&eDiamond Spike", "&aExpnsive but destructive.");
+
+        
+        ItemStack[] recipediamondspike = { null , null, null , null, new ItemStack(Material.DIAMOND_SWORD), null, new ItemStack(Material.DIAMOND_SWORD), new ItemStack(Material.DIAMOND_BLOCK), new ItemStack(Material.DIAMOND_SWORD) };
+
+
+        
+        // wooden spike
+        SlimefunItem item1 = new SlimefunItem(category, woodenSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipewoodenspike);
         item1.register(this);
         
+        
+        // stone spike
+        SlimefunItem item2 = new SlimefunItem(category, stoneSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipestonespike);
+        item2.register(this);
+        
+      //iron spike
+        SlimefunItem item = new SlimefunItem(category, ironSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipeironspike);
+        item.register(this);
+        
+        
+        // golden spike
+        SlimefunItem item3 = new SlimefunItem(category, goldenSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipegoldspike);
+        item3.register(this);
+        
+        
+        // diamond spike
+        SlimefunItem item4 = new SlimefunItem(category, diamondSpike, RecipeType.ENHANCED_CRAFTING_TABLE, recipediamondspike);
+        item4.register(this);
+
+
+
     }
 
     @Override

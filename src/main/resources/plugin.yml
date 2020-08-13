@@ -1,14 +1,14 @@
 ## CHANGE this to the name of your plugin.
-name: SlimefunAddon
+name: Spikes
 
 ## CHANGE this to your username.
-author: CHANGEME
+author: Asriel_dmr
 
 ## CHANGE this to a meaninful but short description of your plugin.
-description: A generic Slimefun4-Addon
+description: A simple way to upgrade your mob farm!
 
 ## CHANGE this to the path of the class that extends JavaPlugin.
-main: me.CHANGEME.slimefunaddon.ExampleAddon
+main: me.Asrieldmr.spikes.Spikes
 
 ## You can change this to link to your website or repository. You can also remove this line if you want to.
 website: https://github.com/TheBusyBiscuit/Slimefun4-Addon

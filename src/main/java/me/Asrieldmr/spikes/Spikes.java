@@ -18,52 +18,43 @@ public class Spikes extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {
-        // Read something from your config.yml
+       
         Config cfg = new Config(this);
 
         if (cfg.getBoolean("options.auto-update")) {
-            // You could start an Auto-Updater for example
+            
         }
 
-        // Slimefun4 also already comes with a bundled version of bStats
-        // You can use bStats to collect usage data about your plugin
-        // More info: https://bstats.org/getting-started
-        // Set bStatsId to the id of your plugin
+        
         int bStatsId = -1;
         new Metrics(this, bStatsId);
 
-        // Create a new Category
-        // This Category will use this ItemStack
-        ItemStack categoryItem = new CustomItem(Material.DIAMOND, "&4Addon Category", "", "&a> Click to open");
+      
+        ItemStack categoryItem = new CustomItem(Material.HEAVY_WEIGHTED_PRESSURE_PLATE, "&eSpikes", "", "&a> Click to open");
 
-        // Give your Category a unique id.
-        NamespacedKey categoryId = new NamespacedKey(this, "addon_category");
+       
+        NamespacedKey categoryId = new NamespacedKey(this, "spikes");
         Category category = new Category(categoryId, categoryItem);
 
-        // Create a new Slimefun ItemStack
-        // This class has many constructors, it is very important that you give each item a unique id.
-        SlimefunItemStack slimefunItem = new SlimefunItemStack("COOL_DIAMOND", Material.DIAMOND, "&4Cool Diamond", "&c+20% Coolness");
+        
+        SlimefunItemStack slimefunItem = new SlimefunItemStack("Iron_Spike", Material.HEAVY_WEIGHTED_PRESSURE_PLATE, "&eIron Spike", "&aSecond best spike - the complete balance between price and damage");
 
-        // The Recipe is an ItemStack Array with a length of 9.
-        // It represents a Shaped Recipe in a 3x3 crafting grid
-        // The machine in which this recipe is crafted in is specified further down
-        ItemStack[] recipe = { new ItemStack(Material.EMERALD), null, new ItemStack(Material.EMERALD), null, new ItemStack(Material.DIAMOND), null, new ItemStack(Material.EMERALD), null, new ItemStack(Material.EMERALD) };
+       
+        ItemStack[] recipe = { null , null, null , null, new ItemStack(Material.IRON_SWORD), null, new ItemStack(Material.IRON_SWORD), new ItemStack(Material.IRON_BLOCK), new ItemStack(Material.IRON_SWORD) };
 
-        // Now you just have to register the item
-        // RecipeType.ENHANCED_CRAFTING_TABLE refers to the machine in which this item is crafted in.
-        // Recipy Types from Slimefun itself will automatically add the recipe to that machine
+      
         SlimefunItem item = new SlimefunItem(category, slimefunItem, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
         item.register(this);
     }
 
     @Override
     public void onDisable() {
-        // Logic for disabling the plugin...
+      
     }
 
     @Override
     public String getBugTrackerURL() {
-        // You can return a link to your Bug Tracker instead of null here
+       
         return null;
     }
 

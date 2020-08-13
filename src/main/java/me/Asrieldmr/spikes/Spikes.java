@@ -1,4 +1,4 @@
-package me.Asrieldmr.spikeeffects;
+package me.Asrieldmr.spikes;
 
  
 import org.bukkit.Material;
@@ -6,6 +6,12 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import me.Asrieldmr.spikeeffects.DiamondSpike;
+import me.Asrieldmr.spikeeffects.GoldSpike;
+import me.Asrieldmr.spikeeffects.IronSpike;
+import me.Asrieldmr.spikeeffects.SpikeListner;
+import me.Asrieldmr.spikeeffects.StoneSpike;
+import me.Asrieldmr.spikeeffects.WoodenSpike;
 import me.mrCookieSlime.Slimefun.Lists.RecipeType;
 import me.mrCookieSlime.Slimefun.Objects.Category;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.SlimefunItem;
@@ -13,7 +19,7 @@ import me.mrCookieSlime.Slimefun.api.SlimefunItemStack;
 import me.mrCookieSlime.Slimefun.bstats.bukkit.Metrics;
 import me.mrCookieSlime.Slimefun.cscorelib2.config.Config;
 import me.mrCookieSlime.Slimefun.cscorelib2.item.CustomItem;
-public class Recipies extends JavaPlugin implements SlimefunAddon {
+public class Spikes extends JavaPlugin implements SlimefunAddon {
  
     @Override
     public void onEnable() {
